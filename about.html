@@ -1,0 +1,1456 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी - Education, Health, and Welfare NGO">
+  <meta name="keywords" content="NGO, Education, Health, Welfare, Donation, Volunteer, Social Service">
+  <meta name="author" content="Shree Ji Hanumat Nandan Society">
+  <title>श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff9800, #9c27b0);
+      padding: 15px 30px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .hero {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x600.png?text=NGO+Hero') center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero .donate {
+      background: #ffeb3b;
+      color: #333;
+    }
+
+    .hero .join {
+      background: #fff;
+      color: #9c27b0;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #6a1b9a;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background: #fff;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .about .text {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .about .text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #ff9800;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+    }
+
+    .events {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .event-card {
+      background: linear-gradient(45deg, #ff9800, #9c27b0);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      transition: 0.3s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .donate-section {
+      background: linear-gradient(to right, #ff9800, #9c27b0);
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .donate-section input {
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+
+    .donate-section button {
+      padding: 12px 25px;
+      background: #ffeb3b;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .donate-section button:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      padding: 12px;
+      background: #9c27b0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #6a1b9a;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      margin: 0 10px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1002;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Top Bar HTML -->
+<div class="top-bar">
+  <div class="social_icon_donate_div">
+    <div class="social-icons d-flex">
+      <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="donate-btn">
+      <button onclick="window.location.href='donate.html'" id="colorButton">Donate Us</button>
+    </div>
+  </div>
+
+  <div class="news-updates">
+    <div class="news-box">
+      <i class="fa fa-bolt"></i> News & Updates
+    </div>
+    <div class="scrolling-marquee w-100">
+      <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+        श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी , पता : दुर्गा नगर गली नंबर 3 विदिशा , संपर्क +91 6264758379 email: shriji@gmail.org
+      </marquee>
+    </div>
+  </div>
+
+  <!-- ✅ Social Media HTML -->
+<div class="social-media-box">
+    <a href="https://www.facebook.com" target="_blank" class="social facebook">
+        <i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social instagram">
+        <i class="fa fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" class="social youtube">
+        <i class="fa fa-youtube"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social twitter">
+        <i class="fa fa-twitter"></i>
+    </a>
+</div>
+
+<!-- ✅ CSS Styling -->
+<style>
+.social-media-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    background: #e9ecef;
+    color: #1c6fac;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.social:hover {
+    transform: translateY(-3px) scale(1.1);
+    color: #fff;
+}
+
+/* ✅ Individual Social Colors */
+.facebook:hover { background: #1877F2; }
+.instagram:hover { background: #E4405F; }
+.youtube:hover { background: #FF0000; }
+.twitter:hover { background: #1DA1F2; }
+</style>
+
+
+</div>
+
+<!-- ✅ CSS Code -->
+<style>
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(176deg, #1c6fac 0%, rgba(10,0,92,1) 100%);
+    padding: 10px 20px;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+
+  .social_icon_donate_div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #ffc107;
+  }
+
+  .donate-btn button {
+    background-color: #ffc107;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .donate-btn button:hover {
+    background-color: #e0a800;
+  }
+
+  .news-updates {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+  .news-box {
+    background: #ffc107;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .scrolling-marquee {
+    flex-grow: 1;
+    color: white;
+    font-size: 14px;
+  }
+
+  .phone {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* ✅ Responsive (Mobile Friendly) */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .social_icon_donate_div {
+      justify-content: center;
+    }
+
+    .news-updates {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+</style>
+<header>
+  <!-- ✅ Navbar HTML (same as yours) -->
+<div class="navbar_relative">
+    <i class="fa fa-bars" id="menu_toggle_btn" onclick="openNav()"></i>
+
+    <div class="website_logo">
+        <a href="index.php"><img src="IMAGES/slide5.png" alt="Logo"></a>
+    </div>
+
+    <div class="website_title">श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</div>
+
+   
+</div>
+
+<!-- ✅ NEW IMPROVED CSS -->
+<style>
+.navbar_relative {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 8px 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-bottom: 3px solid #1c6fac;
+    font-family: "Poppins", sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ✅ Menu Button */
+#menu_toggle_btn {
+    font-size: 24px;
+    color: #1c6fac;
+    cursor: pointer;
+    display: none;
+}
+
+/* ✅ Logo */
+.website_logo img {
+    height: 60px;
+    transition: 0.3s ease-in-out;
+}
+
+.website_logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Title Styling */
+.website_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1c6fac;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+    text-align: center;
+}
+
+/* ✅ Social Icons */
+.website_social_icon {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.website_social_icon a {
+    color: #1c6fac;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.website_social_icon a:hover {
+    color: #fd7e14;
+    transform: scale(1.2);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .navbar_relative {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #menu_toggle_btn {
+        display: block;
+        align-self: flex-start;
+    }
+
+    .website_title {
+        font-size: 18px;
+        text-align: center;
+        order: 2;
+    }
+
+    .website_social_icon {
+        order: 3;
+    }
+}
+</style>
+
+
+      
+</header>
+
+  
+  <header>
+    <nav>
+      <a href="index.html" class="back">🏠 मुख्य पृष्ठ पर जाएं</a>
+      <a href="#about">About</a>
+      <a href="#objectivs">Objectives</a>
+      <a href="#our mambers">Our Mambers</a>
+      <a href="apply_member.html">apply mambers</a>
+      <a href="#projects">Projects</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ✅ NAVBAR / LOGO SECTION END होने के तुरंत बाद यह कोड डालें -->
+   <style>
+  /* ✅ Slider Design */
+   
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: 0.6s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* ✅ Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NGO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* ✅ Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .about-hero h1 {
+            font-size: 42px;
+            margin: 0;
+            font-weight: 700;
+        }
+        .about-hero p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* ✅ About Us Section */
+        .about-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .about-container h2 {
+            color: #1c6fac;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .about-container p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* ✅ Mission & Vision */
+        .mv-section {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mv-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 280px;
+            max-width: 350px;
+            transition: 0.3s;
+        }
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+        .mv-card h3 {
+            color: #fd7e14;
+        }
+
+        /* ✅ Founder Section */
+        .founder-section {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .founder-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1c6fac;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .founder-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            color: #1c6fac;
+        }
+        .founder-role {
+            font-size: 16px;
+            color: #fd7e14;
+            font-weight: 600;
+        }
+        .founder-msg {
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ✅ Values Section */
+        .values-section {
+            background: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .values-section h2 {
+            color: #1c6fac;
+            margin-bottom: 30px;
+        }
+        .values-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .value-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* ✅ CTA Section */
+        .cta-section {
+            background: linear-gradient(45deg, #1c6fac, #36a3eb);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-section a {
+            background: #fd7e14;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* ✅ Responsive */
+        @media(max-width: 768px) {
+            .about-hero h1 { font-size: 32px; }
+            .about-hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ Hero Section -->
+    <section class="about-hero" data-aos="fade-up">
+        <h1>About Our NGO</h1>
+        <p>Empowering Communities, Transforming Lives.</p>
+    </section>
+
+    <!-- ✅ About Content -->
+    <section class="about-container" data-aos="fade-up">
+        <!-- 🌟 WHO WE ARE SECTION START -->
+<section class="who-we-are">
+    <div class="who-container">
+        <div class="who-text">
+            <h2> Who We Are</h2>
+            <p>
+                हमारी NGO समाज के कमजोर वर्गों के लिए शिक्षा, स्वास्थ्य, महिला सशक्तिकरण और पर्यावरण संरक्षण के क्षेत्र में कार्य करती है।
+                हमारा उद्देश्य समाज में सकारात्मक बदलाव लाना और हर व्यक्ति को एक बेहतर जीवन का अवसर प्रदान करना है।
+            </p>
+            <p>
+                हम ग्रामीण और शहरी क्षेत्रों में सेवाएँ प्रदान करते हैं — जैसे फ़्री मेडिकल कैंप, स्कॉलरशिप प्रोग्राम, स्किल डेवलपमेंट, 
+                महिला आत्मनिर्भरता अभियान आदि।
+            </p>
+        </div>
+        <style>
+          /* WHO WE ARE SECTION */
+.who-we-are {
+    background-color: #f7f7f7;
+    padding: 60px 10%;
+}
+
+.who-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.who-text {
+    flex: 1 1 45%;
+}
+
+.who-text h2 {
+    font-size: 2.2rem;
+    color: #1a5d39;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.who-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.who-images {
+    flex: 1 1 45%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.who-images img {
+    width: 48%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.who-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .who-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .who-images img {
+        width: 80%;
+    }
+}
+
+        </style>
+
+        <!-- 2 Images -->
+        <div class="who-images">
+            
+            
+            <img src="IMAGES/teamwork.jpg" alt="NGO Team Working"><br>
+            <img src="IMAGES/helping.jpg" alt="Helping Hand">
+        
+        </div>
+    </div>
+</section>
+<!-- 🌟 WHO WE ARE SECTION END -->
+
+        <!-- 🌟 WHAT WE DO WITH IMAGES -->
+<section class="what-we-do-img">
+    <h2>🌍 हम क्या करते हैं (What We Do)</h2>
+    <p class="what-description">
+        हमारा संगठन समाज के जरूरतमंद लोगों की सहायता के लिए कई क्षेत्रों में कार्य करता है। नीचे दिए गए सेक्शन में आप हमारे प्रमुख कार्य देख सकते हैं:
+    </p>
+
+    <div class="work-image-container">
+
+        <!-- Box 1: Education -->
+        <div class="work-img-card">
+            <img src="IMAGES/education.jpg" alt="Education Work">
+            <div class="work-info">
+                <i class="fas fa-book-open"></i>
+                <h3>शिक्षा सहायता</h3>
+                <p>गरीब, अनाथ और जरूरतमंद बच्चों को किताबें, बैग, ट्यूशन एवं स्कूल एडमिशन में सहायता।</p>
+            </div>
+        </div>
+
+        <!-- Box 2: Health -->
+        <div class="work-img-card">
+            <img src="IMAGES/health.jpg" alt="Health Work">
+            <div class="work-info">
+                <i class="fas fa-stethoscope"></i>
+                <h3>स्वास्थ्य सेवाएँ</h3>
+                <p>हेल्थ चेकअप कैंप, दवा वितरण, रक्तदान शिविर और स्वास्थ्य जागरूकता अभियान।</p>
+            </div>
+        </div>
+
+        <!-- Box 3: Charity -->
+        <div class="work-img-card">
+            <img src="IMAGES/charity.jpg" alt="Helping Poor">
+            <div class="work-info">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>गरीबों की सहायता</h3>
+                <p>जरूरतमंद परिवारों को भोजन, कपड़े, कंबल, राशन और आपातकालीन सहायता प्रदान की जाती है।</p>
+            </div>
+        </div>
+
+        <!-- Box 4: Environment -->
+        <div class="work-img-card">
+            <img src="IMAGES/enviroment.jpg" alt="Plantation Work">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>पर्यावरण संरक्षण</h3>
+                <p>पेड़ लगाओ अभियान, स्वच्छता अभियान और प्लास्टिक मुक्त समाज के लिए जागरूकता फैलाते हैं।</p>
+            </div>
+            
+
+    </div>
+    <div class="work-img-card">
+            <img src="IMAGES/social.jpg" alt="Social Work">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>समाज कल्याण</h3>
+                <p>समाज के कल्याण के लिए मूल भावना से हमेशा आगे </p>
+            </div>
+        </div>
+        <div class="work-img-card">
+            <img src="IMAGES/nasha.jpg" alt="nasa mukti">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>नशा मुक्ति </h3>
+                <p>गाँव गाँव और नगर नगर में गूंजेगा ये सन्देश नशा मुक्त हो भारत देश  </p>
+            </div>
+        </div>
+</section>
+<style>
+  /* 🌟 What We Do - With Pictures */
+.what-we-do-img {
+    padding: 60px 20px;
+    background: #f5f8ff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.what-we-do-img h2 {
+    font-size: 32px;
+    color: #1c6fac;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.what-description {
+    font-size: 16px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.work-image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.work-img-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.work-img-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.work-img-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.work-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.work-info i {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #ffdd57;
+}
+
+.work-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.work-info p {
+    font-size: 14px;
+}
+
+.work-img-card:hover .work-info {
+    background: rgba(0,0,0,0.8);
+}
+
+</style>
+
+        <div class="mv-section">
+            <div class="mv-card">
+                <h3>🎯 Mission</h3>
+                <p>जरूरतमंद समुदायों को शिक्षा, स्वास्थ्य और अवसर देकर सशक्त बनाना।</p>
+            </div>
+            <div class="mv-card">
+                <h3>👁 Vision</h3>
+                <p>एक ऐसा समाज जहाँ हर व्यक्ति सम्मान, शिक्षा और स्वास्थ्य के साथ जीवन जी सके।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Founder Section -->
+    <section class="founder-section" data-aos="fade-up">
+        <img src="founder.jpg" class="founder-img" alt="Founder">
+        <div class="founder-name">Shri Ram Pratap Sharma</div>
+        <div class="founder-role">Founder & President</div>
+        <p class="founder-msg">"हमारा उद्देश्य समाज के हर व्यक्ति तक शिक्षा, स्वास्थ्य और सम्मान पहुँचाना है। 
+        मिलकर हम एक बेहतर कल बना सकते हैं।"</p>
+    </section>
+<!-- ⭐ BOARD MEMBERS SECTION ⭐ -->
+<section class="board-members">
+  <h2>👥 हमारी टीम / Board Members</h2>
+  <div class="member-container">
+
+    <!-- Member 1 -->
+    <div class="member-card">
+      <img src="images/member1.jpg" alt="Member 1">
+      <h3>श्री रोहित चंदेल</h3>
+      <p class="position">संस्थापक एवं अध्यक्ष</p>
+      <p>समाज सेवा के प्रति समर्पित, शिक्षा और स्वास्थ्य के क्षेत्र में वर्षों से कार्यरत।</p>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="member-card">
+      <img src="images/member2.jpg" alt="Member 2">
+      <h3>श्रीमती पूजा शर्मा</h3>
+      <p class="position">उपाध्यक्ष</p>
+      <p>महिला सशक्तिकरण और ग्रामीण विकास के लिए लगातार काम कर रही हैं।</p>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="member-card">
+      <img src="images/member3.jpg" alt="Member 3">
+      <h3>श्री अभिषेक वर्मा</h3>
+      <p class="position">सचिव</p>
+      <p>तकनीकी और प्रशासनिक कार्यों को कुशलता से संभालते हैं।</p>
+    </div>
+
+    <!-- Member 4 -->
+    <div class="member-card">
+      <img src="images/member4.jpg" alt="Member 4">
+      <h3>श्रीमान राजेश मिश्रा</h3>
+      <p class="position">कोषाध्यक्ष</p>
+      <p>संगठन के वित्तीय कार्यों की पारदर्शिता बनाए रखने में सहयोग करते हैं।</p>
+    </div>
+
+  </div>
+</section>
+<!-- 🌟 FAQ SECTION -->
+<section class="faq-section">
+    <h2>❓ अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+    <div class="faq-container">
+
+        <!-- Question 1 -->
+        <div class="faq-item">
+            <button class="faq-question">1. आपका NGO किस उद्देश्य से स्थापित किया गया है?</button>
+            <div class="faq-answer">
+                <p>हमारा NGO शिक्षा, स्वास्थ्य, पर्यावरण संरक्षण, और समाज के वंचित वर्गों के विकास हेतु कार्य करता है।</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <button class="faq-question">2. इस NGO को कैसे सपोर्ट किया जा सकता है?</button>
+            <div class="faq-answer">
+                <p>आप आर्थिक सहायता, वस्तु दान, स्वयंसेवा (Volunteer), या लोगों में जागरूकता फैलाकर हमारी मदद कर सकते हैं।</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <button class="faq-question">3. क्या NGO का Registration और सभी कानूनी दस्तावेज मान्य हैं?</button>
+            <div class="faq-answer">
+                <p>हाँ, हमारा NGO विधिवत पंजीकृत है और सभी आवश्यक सरकारी प्रमाणपत्र हमारे पास उपलब्ध हैं।</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question">4. मैं NGO की Membership या Volunteer कैसे बन सकता हूँ?</button>
+            <div class="faq-answer">
+                <p>आप हमारी वेबसाइट के <strong>Join / Volunteer</strong> सेक्शन में फॉर्म भरकर सदस्य या वॉलंटियर बन सकते हैं।</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<style>
+  /* 💡 FAQ Section Styling */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #f7faff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1c6fac;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1c6fac;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #fd7e14;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    padding: 0 15px;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Active/Show Answer */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+</style>
+<style>
+  
+/* 🌟 Board Members Section Styling */
+.board-members {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fafc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.board-members h2 {
+    font-size: 32px;
+    color: #1c6fac;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.member-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #1c6fac;
+}
+
+.member-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.member-card .position {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c6fac;
+    margin-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 14px;
+    color: #555;
+}
+</style>
+    <!-- ✅ Values Section -->
+    <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-box">🤝 ईमानदारी और पारदर्शिता</div>
+            <div class="value-box">❤️ दया और सेवा भाव</div>
+            <div class="value-box">📚 शिक्षा सबके लिए</div>
+            <div class="value-box">🌱 सतत विकास</div>
+        </div>
+    </section>
+
+    <!-- ✅ Call to Action -->
+    <section class="cta-section">
+        <h2>Join Us in Making a Difference</h2>
+        <a href="contact.html">Contact Us</a>
+    </section>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>हमारा उद्देश्य शिक्षा, स्वास्थ्य, सामाजिक विकास और मानव कल्याण के लिए काम करना है। हम समाज के कमजोर वर्गों को सशक्त बनाने के लिए कार्यरत हैं।</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p><i class="fa fa-map-marker"></i> 1. दुर्गा नगर गली नंबर 3 विदिशा <br>2. खेजड़ा बरामद भानपुर भोपाल</p>
+      <p><i class="fa fa-phone"></i> +91 6264758379</p>
+      <p><i class="fa fa-envelope"></i> yourngo@gmail.com</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- ✅ Donation QR Section -->
+    <div class="footer-column">
+      <a href="donate.html">Donate Us</a>
+      <p>आप अपने मोबाइल से स्कैन करके डोनेशन कर सकते हैं:</p>
+      <img src="IMAGES/upi-qr.jpg" alt="UPI QR Code" class="donation-qr">
+      <p><strong>UPI ID:</strong> <span>hanumantnandan@upi</span></p>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+    <p>copyright©2025 श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी | All Rights Reserved</p>
+  </div>
+</footer>
+
+<style>
+/* Footer Style */
+.footer {
+  background: #111827;
+  color: #fff;
+  padding: 40px 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #facc15;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #facc15;
+}
+
+/* ✅ Donation QR Styling */
+.donation-qr {
+  width: 120px;
+  margin: 10px 0;
+  border: 2px solid #facc15;
+  border-radius: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #374151;
+}
+</style>
+</body>
+</html>

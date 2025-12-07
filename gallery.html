@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>गैलरी | श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      background-color: #fff8e1;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #6a1b9a, #f57c00);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .gallery {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    a.back {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      background: #f57c00;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+    a.back:hover {
+      background: #ef6c00;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>गैलरी</h1>
+  <p>श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</p>
+</header>
+
+<a href="index.html" class="back">🏠 मुख्य पृष्ठ पर जाएं</a>
+
+<section class="gallery">
+  <!-- Aap yahan apni photos ke naam lagayein (images folder me rakhein) -->
+  <img src="images/event1.jpg" alt="Training Session">
+  <img src="images/event2.jpg" alt="Health Camp">
+  <img src="images/event3.jpg" alt="Student Activity">
+  <img src="images/event4.jpg" alt="Workshop">
+  <img src="images/event5.jpg" alt="Award Ceremony">
+  <img src="images/event6.jpg" alt="Community Work">
+</section>
+
+<footer>
+  © 2025 श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी | सर्वाधिकार सुरक्षित
+</footer>
+
+</body>
+</html>

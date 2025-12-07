@@ -1,0 +1,404 @@
+<!-- Save this as index.html -->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukhi Life Welfare Foundation — Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg-1: #eef6fb;
+      --accent: #0ea5a4;
+      --accent-2: #1c6fac;
+      --orange: #fd7e14;
+      --muted: #616973;
+      --glass: rgba(255,255,255,0.75);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background: linear-gradient(180deg,var(--bg-1) 0%, #ffffff 100%);
+      color:#0f172a; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* ---------------- Header / Navbar ---------------- */
+    .navbar_relative{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px;
+      padding:12px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.6));
+      backdrop-filter: blur(8px);
+      position:sticky; top:0; z-index:999;
+      box-shadow: 0 8px 28px rgba(12,20,40,0.06);
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg,var(--accent-2),var(--accent)) 1;
+    }
+    .website_logo img{ height:56px; transition:transform .25s ease; }
+    .website_logo img:hover{ transform:scale(1.05); }
+    .website_title{ flex:1; text-align:center; font-weight:700; color:var(--accent-2); font-size:18px; letter-spacing:1px; text-transform:uppercase; }
+    .nav-actions{ display:flex; gap:10px; align-items:center; }
+    .nav-actions a{ text-decoration:none; padding:8px 12px; border-radius:10px; font-weight:600; color:var(--accent-2); border:1px solid rgba(28,111,172,0.08); }
+    .nav-actions .btn-donate{ background: linear-gradient(90deg,var(--orange),#f97316); color:#fff; border:none; }
+    #menu_toggle_btn{ display:none; font-size:24px; color:var(--accent-2); cursor:pointer; }
+
+    /* ---------------- Hero ---------------- */
+    .hero{
+      display:grid; grid-template-columns: 1fr 420px; gap:28px;
+      align-items:center; padding:48px 28px; max-width:1180px; margin:18px auto;
+    }
+    @media(max-width:980px){ .hero{ grid-template-columns:1fr; padding:28px 18px; } #menu_toggle_btn{ display:block; } .website_title{ order:2 } }
+    .hero-left{ padding:8px 6px; }
+    .eyebrow{display:inline-block; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; padding:6px 10px; border-radius:999px; font-weight:700; font-size:0.85rem; margin-bottom:12px;}
+    .hero-left h1{ font-size:2.4rem; margin:10px 0; color:#06202a; }
+    .hero-left p{ color:var(--muted); margin-bottom:18px; font-size:1rem; max-width:62ch; }
+    .cta-group{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .btn{ padding:12px 16px; border-radius:12px; font-weight:700; text-decoration:none; display:inline-flex; gap:10px; align-items:center; cursor:pointer; border:none; }
+    .btn-primary{ background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; box-shadow: 0 10px 25px rgba(12,107,107,0.12); }
+    .btn-outline{ background:transparent; border:1px solid rgba(12,20,40,0.06); color:var(--accent-2); }
+    .hero-stats{ display:flex; gap:12px; margin-top:20px; flex-wrap:wrap; }
+    .stat{ background:var(--glass); padding:10px 14px; border-radius:10px; min-width:120px; box-shadow:0 8px 20px rgba(2,6,23,0.04); }
+    .stat .num{ font-weight:700; font-size:1.25rem; color:var(--accent-2); }
+    .stat .label{ font-size:0.9rem; color:var(--muted); }
+
+    /* ---------------- Right Hero Card ---------------- */
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      border-radius:14px; padding:18px; box-shadow:0 18px 40px rgba(2,6,23,0.06);
+    }
+    .hero-card h3{ margin:4px 0 10px; color:#0f172a; }
+    .hero-card p{ color:var(--muted); margin-bottom:10px; }
+    .small-contact{ display:flex; gap:10px; align-items:center; margin-top:12px; }
+    .small-contact a{ text-decoration:none; color:var(--accent-2); font-weight:600; }
+
+    /* ---------------- About Section ---------------- */
+    .section{ padding:48px 18px; max-width:1180px; margin:0 auto 10px; }
+    .about{
+      display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:center;
+    }
+    @media(max-width:980px){ .about{ grid-template-columns:1fr; } }
+    .about .about-text h2{ font-size:1.8rem; color:#0f172a; margin-bottom:8px; }
+    .about .about-text p{ color:var(--muted); margin-bottom:12px; }
+    .about .about-list{ display:flex; gap:10px; flex-wrap:wrap; }
+    .card-mini{ background:#fff; padding:14px; border-radius:12px; box-shadow:0 12px 30px rgba(2,6,23,0.03); min-width:160px; }
+    .about img{ width:100%; border-radius:12px; box-shadow:0 16px 40px rgba(2,6,23,0.05); }
+
+    /* ---------------- Services / Work ---------------- */
+    .services{ background: linear-gradient(180deg,#ffffff 0%, #fbfdff 100%); padding:36px 18px; border-radius:14px; box-shadow:0 10px 30px rgba(2,6,23,0.02); }
+    .services-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .service-card{ background:var(--glass); padding:20px; border-radius:12px; text-align:left; transition:transform .28s ease, box-shadow .28s ease; border:1px solid rgba(12,20,40,0.04); }
+    .service-card:hover{ transform: translateY(-8px); box-shadow:0 22px 38px rgba(2,6,23,0.06); }
+    .service-card i{ font-size:24px; color:var(--accent-2); margin-bottom:10px; display:inline-block; }
+
+    /* ---------------- Impact Counters ---------------- */
+    .counters{ display:flex; gap:18px; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-top:18px; }
+    .counter{ flex:1; min-width:140px; background:linear-gradient(180deg,#fff,#f8ffff); padding:18px; border-radius:12px; text-align:center; box-shadow:0 10px 30px rgba(2,6,23,0.04); }
+    .counter .num{ font-size:1.8rem; font-weight:800; color:var(--accent-2); }
+    .counter .label{ color:var(--muted); margin-top:6px; font-weight:600; }
+
+    /* ---------------- CTA / Join ---------------- */
+    .cta{
+      margin:36px 0; background:linear-gradient(90deg, rgba(14,165,164,0.08), rgba(28,111,172,0.05));
+      border-radius:12px; padding:20px; display:flex; gap:18px; align-items:center; justify-content:space-between;
+    }
+    @media(max-width:700px){ .cta{ flex-direction:column; text-align:center; } }
+    .cta h3{ margin:0; color:#06202a; }
+    .cta p{ color:var(--muted); margin:0; }
+
+    /* ---------------- Footer ---------------- */
+    .site-footer{ padding:28px 18px; background:linear-gradient(180deg,#f8fbfc,#ffffff); margin-top:28px; border-top:1px solid rgba(12,20,40,0.03); }
+    .footer-grid{ max-width:1180px; margin:0 auto; display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap; align-items:flex-start; }
+    .footer-col{ min-width:200px; }
+    .socials a{ margin-right:8px; text-decoration:none; color:var(--accent-2); font-size:18px; }
+
+    /* Floating buttons */
+    .floating.whatsapp{ position:fixed; right:18px; bottom:120px; background:linear-gradient(45deg,#25D366,#128C7E); color:#fff; padding:12px 14px; border-radius:999px; display:flex; gap:10px; align-items:center; z-index:1000; box-shadow:0 20px 40px rgba(18,140,126,0.14); text-decoration:none; }
+    .floating.call, .floating.donate{ position:fixed; right:18px; bottom:18px; width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none; z-index:1000; box-shadow:0 12px 28px rgba(2,6,23,0.12); }
+    .floating.call{ background: linear-gradient(180deg,#06b6d4,#0891b2); right:86px; }
+    .floating.donate{ background: linear-gradient(180deg,#fb7185,#ef4444); right:18px; }
+
+    /* small responsive tweaks */
+    @media(max-width:520px){
+      .hero-left h1{ font-size:1.6rem; }
+      .website_title{ font-size:16px; }
+      .stat{ min-width:110px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar_relative" aria-label="Main Navigation" role="banner">
+    <div id="menu_toggle_btn" aria-hidden="true"><i class="fa fa-bars"></i></div>
+    <div class="website_logo"><a href="#"><img src="https://via.placeholder.com/140x56?text=Logo" alt="Sukhi Life Logo" /></a></div>
+    <div class="website_title">Sukhi Life Welfare Foundation</div>
+
+    <nav class="nav-actions" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Our Work</a>
+      <a href="#impact">Impact</a>
+      <a class="btn btn-outline" href="#join">Join Us</a>
+      <a class="btn btn-donate" href="#donate">Donate</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-left" data-aos="fade-up">
+        <span class="eyebrow">Community • Care • Change</span>
+        <h1>साथ मिलकर सशक्त समाज बनाएँ</h1>
+        <p>हम शिक्षा, स्वास्थ्य और समाज कल्याण क्षेत्रों में काम करते हैं — स्थानीय समुदायों को जागरूक करना और उनकी जीवन गुणवत्ता सुधारना हमारा लक्ष्य है।</p>
+
+        <div class="cta-group">
+          <a href="#donate" class="btn btn-primary"><i class="fa fa-hand-holding-heart"></i> Donate Now</a>
+          <a href="#join" class="btn btn-outline"><i class="fa fa-hands-helping"></i> Volunteer</a>
+        </div>
+
+        <div class="hero-stats" aria-hidden="false">
+          <div class="stat">
+            <div class="num" data-target="12500">0</div>
+            <div class="label">Beneficiaries</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-target="420">0</div>
+            <div class="label">Volunteers</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-target="86">0</div>
+            <div class="label">Campaigns</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card" data-aos="fade-left">
+        <h3>Quick Contact</h3>
+        <p>किसी भी जानकारी के लिए कॉल या व्हाट्सएप करें — हम आपकी सहायता के लिए हमेशा तैयार हैं।</p>
+        <div class="small-contact">
+          <a href="tel:+919876543210"><i class="fa fa-phone"></i>&nbsp;+91 98765 43210</a>
+          <a href="mailto:contact@sukhilife.org"><i class="fa fa-envelope"></i>&nbsp;contact@sukhilife.org</a>
+        </div>
+        <hr style="margin:14px 0; border:none; border-top:1px dashed rgba(12,20,40,0.06);" />
+        <h4 style="margin:6px 0;">Our Latest Campaign</h4>
+        <p style="color:var(--muted); margin-bottom:8px;">"Jal Suraksha" water conservation drive — clean water for 200+ households.</p>
+        <a class="btn btn-outline" href="#work">Learn More</a>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-text" data-aos="fade-right">
+        <h2>हम कौन हैं</h2>
+        <p>Sukhi Life Welfare Foundation एक गैर-लाभकारी संस्था है जो ग्रामीण और शहरी कमजोर वर्गों के बीच शिक्षा, स्वास्थ्य और सामाजिक जागरूकता फैलाती है। हमारा लक्ष्य छोटे कदमों से बड़ा बदलाव लाना है।</p>
+        <div class="about-list">
+          <div class="card-mini" data-aos="zoom-in" data-aos-delay="50">
+            <strong>Mission</strong>
+            <p style="color:var(--muted); margin-top:6px;">स्थायी विकास और समुदाय सशक्तिकरण।</p>
+          </div>
+          <div class="card-mini" data-aos="zoom-in" data-aos-delay="120">
+            <strong>Vision</strong>
+            <p style="color:var(--muted); margin-top:6px;">एक समावेशी और स्वस्थ समाज।</p>
+          </div>
+          <div class="card-mini" data-aos="zoom-in" data-aos-delay="190">
+            <strong>Values</strong>
+            <p style="color:var(--muted); margin-top:6px;">ईमानदारी, पारदर्शिता, और सहयोग।</p>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <img src="https://via.placeholder.com/520x360?text=NGO+Work+Image" alt="NGO work" />
+      </div>
+    </section>
+
+    <!-- SERVICES / WORK -->
+    <section class="section services" id="work" data-aos="fade-up">
+      <h2 style="margin-bottom:12px;">हमारे कार्य</h2>
+      <p style="color:var(--muted); margin-bottom:18px; max-width:80ch;">हम कई पहल चलाते हैं — शिक्षा अभियान, हेल्थ कैम्प, महिला सशक्तिकरण, और पानी बचाने वाली योजनाएँ।</p>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="flip-left">
+          <i class="fa fa-graduation-cap"></i>
+          <h4>Education</h4>
+          <p style="color:var(--muted);">स्कूल सपोर्ट, ट्यूटरिंग, और स्कॉलरशिप प्रोग्राम्स।</p>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="80">
+          <i class="fa fa-heartbeat"></i>
+          <h4>Health Camps</h4>
+          <p style="color:var(--muted);">फ्री मेडिकल चेकअप और स्वास्थ्य जागरूकता शिविर।</p>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="160">
+          <i class="fa fa-people-roof"></i>
+          <h4>Women Empowerment</h4>
+          <p style="color:var(--muted);">Skill training और आत्मनिर्भरता के प्रोग्राम्स।</p>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="240">
+          <i class="fa fa-water"></i>
+          <h4>Water Conservation</h4>
+          <p style="color:var(--muted);">जल संरक्षण और सफाई अभियानों का संचालन।</p>
+        </div>
+      </div>
+
+      <!-- Impact counters -->
+      <div id="impact" class="counters" style="margin-top:24px;">
+        <div class="counter" data-aos="fade-up">
+          <div class="num" data-target="12500">0</div>
+          <div class="label">Beneficiaries</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="80">
+          <div class="num" data-target="420">0</div>
+          <div class="label">Volunteers</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="160">
+          <div class="num" data-target="86">0</div>
+          <div class="label">Campaigns</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta" data-aos="zoom-in">
+        <div>
+          <h3>आपका छोटा योगदान — बड़ा असर</h3>
+          <p>डोनेट करें या वॉलेंटियर बनकर हमारे साथ जुड़ें — मिलकर हम अधिक से अधिक लोगों की मदद कर सकते हैं।</p>
+        </div>
+        <div>
+          <a href="#donate" class="btn btn-primary" style="margin-right:8px;">Donate</a>
+          <a href="#join" class="btn btn-outline">Volunteer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Buttons -->
+  <a class="floating whatsapp" href="https://wa.me/919876543210?text=Hello%20Sukhi%20Life" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i><span style="font-weight:700;">WhatsApp</span>
+  </a>
+  <a class="floating call" href="tel:+919876543210" aria-label="Call us"><i class="fa fa-phone"></i></a>
+  <a class="floating donate" href="#donate" aria-label="Donate"><i class="fa fa-hand-holding-heart"></i></a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <strong>Sukhi Life Welfare Foundation</strong>
+        <p style="color:var(--muted); margin-top:8px;">Ward No.5, Main Road, Bhopal, Madhya Pradesh</p>
+        <div style="margin-top:8px;">
+          <a href="mailto:contact@sukhilife.org">contact@sukhilife.org</a><br/>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <strong>Quick Links</strong>
+        <div style="margin-top:8px;">
+          <a href="#about">About</a><br/>
+          <a href="#work">Our Work</a><br/>
+          <a href="#impact">Impact</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <strong>Follow Us</strong>
+        <div class="socials" style="margin-top:8px;">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1180px; margin:18px auto 0; text-align:center; color:var(--muted);">
+      © <span id="year"></span> Sukhi Life Welfare Foundation — All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // AOS init
+    AOS.init({ duration: 800, once: true });
+
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Animate counters when visible
+    const counters = document.querySelectorAll('.num');
+    const speed = 2000; // duration in ms
+
+    const runCounter = (el, target) => {
+      let start = 0;
+      const stepTime = Math.abs(Math.floor(speed / target));
+      const timer = setInterval(() => {
+        start += Math.max(1, Math.floor(target / (speed / 20)));
+        if(start >= target){
+          el.textContent = target.toLocaleString();
+          clearInterval(timer);
+        } else {
+          el.textContent = start.toLocaleString();
+        }
+      }, stepTime);
+    };
+
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target') || '0', 10);
+          if(target && el.textContent.trim() === '0'){
+            runCounter(el, target);
+          }
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(c => io.observe(c));
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1 && document.querySelector(href)){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
+    });
+
+    // Mobile menu toggle (simple)
+    const menuBtn = document.getElementById('menu_toggle_btn');
+    const navActions = document.querySelector('.nav-actions');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=>{
+        navActions.style.display = navActions.style.display === 'flex' ? 'none' : 'flex';
+        navActions.style.flexDirection = 'column';
+        navActions.style.alignItems = 'flex-end';
+      });
+    }
+
+    // small entrance animation for floating buttons
+    window.addEventListener('load', ()=> {
+      document.querySelectorAll('.floating').forEach((el, idx) => {
+        el.style.transform = 'translateY(12px)';
+        el.style.opacity = '0';
+        setTimeout(()=>{ el.style.transition = 'transform .45s cubic-bezier(.2,.9,.2,1), opacity .45s'; el.style.transform = 'translateY(0)'; el.style.opacity = '1'; }, 180 + idx*120);
+      });
+    });
+  </script>
+</body>
+</html>

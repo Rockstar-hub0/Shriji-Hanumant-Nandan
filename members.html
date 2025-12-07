@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी - Education, Health, and Welfare NGO">
+  <meta name="keywords" content="NGO, Education, Health, Welfare, Donation, Volunteer, Social Service">
+  <meta name="author" content="Shree Ji Hanumat Nandan Society">
+  <title>श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff9800, #9c27b0);
+      padding: 15px 30px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .hero {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x600.png?text=NGO+Hero') center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero .donate {
+      background: #ffeb3b;
+      color: #333;
+    }
+
+    .hero .join {
+      background: #fff;
+      color: #9c27b0;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #6a1b9a;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background: #fff;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .about .text {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .about .text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #ff9800;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+    }
+
+    .events {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .event-card {
+      background: linear-gradient(45deg, #ff9800, #9c27b0);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      transition: 0.3s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .donate-section {
+      background: linear-gradient(to right, #ff9800, #9c27b0);
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .donate-section input {
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+
+    .donate-section button {
+      padding: 12px 25px;
+      background: #ffeb3b;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .donate-section button:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      padding: 12px;
+      background: #9c27b0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #6a1b9a;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      margin: 0 10px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1002;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Top Bar HTML -->
+<div class="top-bar">
+  <div class="social_icon_donate_div">
+    
+    <div class="donate-btn">
+      <button onclick="window.location.href='donate.html'" id="colorButton">Donate Us</button>
+    </div>
+  </div>
+
+  <div class="news-updates">
+    <div class="news-box">
+      <i class="fa fa-bolt"></i> News & Updates
+    </div>
+    <div class="scrolling-marquee w-100">
+      <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+        श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी , पता : दुर्गा नगर गली नंबर 3 विदिशा , संपर्क +91 6264758379 email: shriji@gmail.org
+      </marquee>
+    </div>
+  </div>
+
+  <!-- ✅ Social Media HTML -->
+<div class="social-media-box">
+    <a href="https://www.facebook.com" target="_blank" class="social facebook">
+        <i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social instagram">
+        <i class="fa fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" class="social youtube">
+        <i class="fa fa-youtube"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social twitter">
+        <i class="fa fa-twitter"></i>
+    </a>
+</div>
+
+<!-- ✅ CSS Styling -->
+<style>
+.social-media-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    background: #e9ecef;
+    color: #1c6fac;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.social:hover {
+    transform: translateY(-3px) scale(1.1);
+    color: #fff;
+}
+
+/* ✅ Individual Social Colors */
+.facebook:hover { background: #1877F2; }
+.instagram:hover { background: #E4405F; }
+.youtube:hover { background: #FF0000; }
+.twitter:hover { background: #1DA1F2; }
+</style>
+
+
+</div>
+
+<!-- ✅ CSS Code -->
+<style>
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(176deg, #1c6fac 0%, rgba(10,0,92,1) 100%);
+    padding: 10px 20px;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+
+  .social_icon_donate_div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #ffc107;
+  }
+
+  .donate-btn button {
+    background-color: #ffc107;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .donate-btn button:hover {
+    background-color: #e0a800;
+  }
+
+  .news-updates {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+  .news-box {
+    background: #ffc107;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .scrolling-marquee {
+    flex-grow: 1;
+    color: white;
+    font-size: 14px;
+  }
+
+  .phone {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* ✅ Responsive (Mobile Friendly) */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .social_icon_donate_div {
+      justify-content: center;
+    }
+
+    .news-updates {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+</style>
+<header>
+  <!-- ✅ Navbar HTML (same as yours) -->
+<div class="navbar_relative">
+    <i class="fa fa-bars" id="menu_toggle_btn" onclick="openNav()"></i>
+
+    <div class="website_logo">
+        <a href="index.php"><img src="IMAGES/slide5.png" alt="Logo"></a>
+    </div>
+
+    <div class="website_title">श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</div>
+
+   
+</div>
+
+<!-- ✅ NEW IMPROVED CSS -->
+<style>
+.navbar_relative {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 8px 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-bottom: 3px solid #1c6fac;
+    font-family: "Poppins", sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ✅ Menu Button */
+#menu_toggle_btn {
+    font-size: 24px;
+    color: #1c6fac;
+    cursor: pointer;
+    display: none;
+}
+
+/* ✅ Logo */
+.website_logo img {
+    height: 60px;
+    transition: 0.3s ease-in-out;
+}
+
+.website_logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Title Styling */
+.website_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1c6fac;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+    text-align: center;
+}
+
+/* ✅ Social Icons */
+.website_social_icon {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.website_social_icon a {
+    color: #1c6fac;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.website_social_icon a:hover {
+    color: #fd7e14;
+    transform: scale(1.2);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .navbar_relative {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #menu_toggle_btn {
+        display: block;
+        align-self: flex-start;
+    }
+
+    .website_title {
+        font-size: 18px;
+        text-align: center;
+        order: 2;
+    }
+
+    .website_social_icon {
+        order: 3;
+    }
+}
+</style>
+
+
+      
+</header>
+
+  
+  <header>
+    <nav>
+      <a href="index.html" class="back">🏠 मुख्य पृष्ठ पर जाएं</a>
+      <a href="#about">About</a>
+      <a href="#objectivs">Objectives</a>
+      <a href="#our mambers">Our Mambers</a>
+      <a href="apply_member.html">apply mambers</a>
+      <a href="#projects">Projects</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ✅ NAVBAR / LOGO SECTION END होने के तुरंत बाद यह कोड डालें -->
+   <style>
+  /* ✅ Slider Design */
+   
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: 0.6s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* ✅ Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+</style>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Members | Sukhi Life Welfare Foundation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .members-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .members-section h2 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .members-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .member-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .member-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      text-align: center;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .member-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .member-card h3 {
+      font-size: 1.4rem;
+      margin: 10px 0 5px;
+      color: #222;
+      font-weight: 600;
+    }
+
+    .member-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 3px 0;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      font-size: 1.3rem;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+<section class="members-section">
+  <h2>👥 हमारे समर्पित सदस्य</h2>
+  <p>ये वो लोग हैं जिनकी वजह से हमारी संस्था समाज की सेवा में निरंतर कार्यरत है।</p>
+
+  <div class="member-container">
+
+    <div class="member-card">
+      <img src="IMAGES/membar1.jpg" alt="Member Photo">
+      <h3>Indra Shivhre</h3>
+      <p><strong>पद:</strong> सदस्य  </p>
+      <p><strong>मोबाइल:</strong> +91 8827577581 </p>
+      <p><strong>ईमेल:</strong> @ladoshivhare925@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="member-card">
+      <img src="IMAGES/membar2.jpg" alt="Member Photo">
+      <h3>Pratimar</h3>
+      <p><strong>पद:</strong> महिला मंडल अध्यक्ष  </p>
+      <p><strong>मोबाइल:</strong> +91 8368452090 </p>
+      <p><strong>ईमेल:</strong> pratimagp3@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar3.jpg" alt="Member Photo">
+      <h3>Dr Vidhya Vishvkarma </h3>
+      <p><strong>पद:</strong> सचिव </p>
+      <p><strong>मोबाइल:</strong> +91 7987230223 </p>
+      <p><strong>ईमेल:</strong> vidhyaashi90@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar4.jpg" alt="Member Photo">
+      <h3>Sandhya Jain</h3>
+      <p><strong>पद:</strong>सदस्य  </p>
+      <p><strong>मोबाइल:</strong> +91 8305167063 </p>
+      <p><strong>ईमेल:</strong> sandhyajain074@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar5.jpg" alt="Member Photo">
+      <h3>Rajendra Singh Chauhanr</h3>
+      <p><strong>पद:</strong> सयुंक्त सचिव </p>
+      <p><strong>मोबाइल:</strong> +91 9893878869 </p>
+      <p><strong>ईमेल:</strong> rabendrachauhan524@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar6.jpg" alt="Member Photo">
+      <h3>Gourav Tiwari </h3>
+      <p><strong>पद:</strong> Media  </p>
+      <p><strong>मोबाइल:</strong> +91 9981119115 </p>
+      <p><strong>ईमेल:</strong> gourav.tiwari79@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="IMAGES/membar7.jpg" alt="Member Photo">
+      <h3> Rajesh </h3>
+      <p><strong>पद:</strong> Marketing Menager </p>
+      <p><strong>मोबाइल:</strong> +91 8103067091 </p>
+      <p><strong>ईमेल:</strong> rajesh201289@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="IMAGES/membar8.jpg" alt="Member Photo">
+      <h3>Dhaniram  Chadar</h3>
+      <p><strong>पद:</strong> Mentor </p>
+      <p><strong>मोबाइल:</strong> +91 8120077414</p>
+      <p><strong>ईमेल:</strong> dhaniramchadar77@gmail.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>हमारा उद्देश्य शिक्षा, स्वास्थ्य, सामाजिक विकास और मानव कल्याण के लिए काम करना है। हम समाज के कमजोर वर्गों को सशक्त बनाने के लिए कार्यरत हैं।</p>
+    </div>
+
+    
+    <!-- Contact Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p><i class="fa fa-map-marker"></i>1. पता दुर्गा नगर गली नंबर 3 विदिशा ,2. खेजडा बरामद भानपुर भोपाल  </p>
+      <p><i class="fa fa-phone"></i> +91 6264758379</p>
+      <p><i class="fa fa-envelope"></i> yourngo@gmail.com</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+    <p>copyright©2025 श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी | All Rights Reserved</p>
+  </div>
+</footer>
+<style>/* Footer Style */
+.footer {
+  background: #111827;
+  color: #fff;
+  padding: 40px 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #facc15;
+}
+
+.footer-column p, .footer-column ul li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #facc15;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #facc15;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #374151;
+}
+</style>
+<a href="donate.html" class="floating-donate-btn">
+    <i class="fa fa-heart"></i> Donate
+</a>
+
+<style>.floating-donate-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    background-color: #4a90e2; /* Light Blue like screenshot */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+/* Hover Effect */
+.floating-donate-btn:hover {
+    background-color: #357ABD;
+    transform: scale(1.08);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .floating-donate-btn {
+        bottom: 90px;
+        right: 10px;
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+</style>
+
+</body>
+</html>
