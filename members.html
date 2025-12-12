@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="hi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -350,7 +352,12 @@
   <!-- ✅ Top Bar HTML -->
 <div class="top-bar">
   <div class="social_icon_donate_div">
-    
+    <div class="social-icons d-flex">
+      <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+    </div>
     <div class="donate-btn">
       <button onclick="window.location.href='donate.html'" id="colorButton">Donate Us</button>
     </div>
@@ -414,7 +421,7 @@
 
 /* ✅ Individual Social Colors */
 .facebook:hover { background: #1877F2; }
-.instagram:hover { background: #E4405F; }
+.instagram:hover { background:#E4405F; }
 .youtube:hover { background: #FF0000; }
 .twitter:hover { background: #1DA1F2; }
 </style>
@@ -516,104 +523,89 @@
 <header>
   <!-- ✅ Navbar HTML (same as yours) -->
 <div class="navbar_relative">
-    <i class="fa fa-bars" id="menu_toggle_btn" onclick="openNav()"></i>
+  <div class="website_logo">
+    <a href="index.php"><img src="IMAGES/slide5.png" alt="Logo"></a>
+  </div>
 
-    <div class="website_logo">
-        <a href="index.php"><img src="IMAGES/slide5.png" alt="Logo"></a>
-    </div>
+  <div class="website_title">श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</div>
 
-    <div class="website_title">श्री जी हनुमत नंदन एजुकेशन हेल्थ एंड वेलफेयर सोसाइटी</div>
-
-   
+  <div class="website_social_icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+  </div>
+  
 </div>
 
-<!-- ✅ NEW IMPROVED CSS -->
+<!-- ✅ NEW SIMPLE & STYLISH CSS -->
 <style>
 .navbar_relative {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f8f9fa;
-    padding: 8px 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-    border-bottom: 3px solid #1c6fac;
-    font-family: "Poppins", sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px 30px;
+  font-family: "Poppins", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* ✅ Menu Button */
-#menu_toggle_btn {
-    font-size: 24px;
-    color: #1c6fac;
-    cursor: pointer;
-    display: none;
-}
-
-/* ✅ Logo */
+/* ✅ Logo Styling */
 .website_logo img {
-    height: 60px;
-    transition: 0.3s ease-in-out;
+  height: 65px;
+  transition: transform 0.3s ease;
 }
-
 .website_logo img:hover {
-    transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* ✅ Title Styling */
+/* ✅ Title Styling (Simple & Elegant) */
 .website_title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1c6fac;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #004aad;
+  font-family: "Segoe UI", "Poppins", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 /* ✅ Social Icons */
 .website_social_icon {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  gap: 16px;
 }
-
 .website_social_icon a {
-    color: #1c6fac;
-    font-size: 20px;
-    transition: 0.3s;
+  color: #004aad;
+  font-size: 22px;
+  transition: 0.3s ease;
 }
-
 .website_social_icon a:hover {
-    color: #fd7e14;
-    transform: scale(1.2);
+  color: #ff6600;
+  transform: scale(1.2);
 }
 
-/* ✅ Responsive Design */
+/* ✅ Responsive */
 @media (max-width: 768px) {
-    .navbar_relative {
-        flex-direction: column;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    #menu_toggle_btn {
-        display: block;
-        align-self: flex-start;
-    }
-
-    .website_title {
-        font-size: 18px;
-        text-align: center;
-        order: 2;
-    }
-
-    .website_social_icon {
-        order: 3;
-    }
+  .navbar_relative {
+    flex-direction: column;
+    padding: 12px;
+    text-align: center;
+  }
+  .website_title {
+    font-size: 18px;
+    margin: 6px 0;
+  }
+  .website_logo img {
+    height: 55px;
+  }
+  .website_social_icon {
+    justify-content: center;
+  }
 }
 </style>
+
 
 
       
@@ -621,17 +613,137 @@
 
   
   <header>
+    
     <nav>
-      <a href="index.html" class="back">🏠 मुख्य पृष्ठ पर जाएं</a>
-      <a href="#about">About</a>
-      <a href="#objectivs">Objectives</a>
-      <a href="#our mambers">Our Mambers</a>
-      <a href="apply_member.html">apply mambers</a>
+      <a href="index.html" class="back">🏠Home</a>
+      <a href="about.html">About</a>
+      
+      <a href="members.html">Our Mambers</a>
+      <a href="apply_member.html">Membership</a>
       <a href="#projects">Projects</a>
-      <a href="#events">Events</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="media.html">Media</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate Us</a>
     </nav>
+    <!-- Language Translator -->
+<div id="google_translate_element" style="float:right; margin-right:20px;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'hi',
+      includedLanguages: 'hi,en,mr,gu,bn,ta,te,kn,ml,pa,ur,ne,ar',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script type="text/javascript" 
+src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<style>
+#google_translate_element select {
+    background: #ffffff !important;
+    color: #000 !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hiding Google Branding (Optional but clean look) */
+.goog-logo-link { display:none !important; }
+.goog-te-gadget { color: transparent !important; }
+.goog-te-banner-frame { display: none !important; }
+body { top: 0px !important; }
+
+/* Inside dropdown options */
+.goog-te-combo {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+</style>
+
+   
+
+    <!-- 🌗 Theme Toggle Button (Navbar Right Corner) -->
+    <button id="theme-toggle" class="theme-nav-btn">🌙</button>
+</div>
+<style>
+  /* Theme Colors */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --nav-bg: #f8f9fa;
+    --primary-color: #1c6fac;
+}
+
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --nav-bg: #1e1e1e;
+    --primary-color: #00bcd4;
+}
+
+/* Body */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* Navbar */
+.navbar_relative {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav-bg);
+    padding: 10px 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Theme Button in Navbar */
+.theme-nav-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.theme-nav-btn:hover {
+    opacity: 0.85;
+}
+
+/* Social Icons gap fix */
+.website_social_icon {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+</style>
+<script>
+document.getElementById("theme-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+        this.textContent = "☀";  // Light Mode Icon
+    } else {
+        this.textContent = "🌙";  // Dark Mode Icon
+    }
+});
+</script>
+
   </header>
 
   <!-- ✅ NAVBAR / LOGO SECTION END होने के तुरंत बाद यह कोड डालें -->
@@ -684,13 +796,53 @@
   background-color: rgba(0,0,0,0.7);
 }
 </style>
-<html lang="hi">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NGO Members | Sukhi Life Welfare Foundation</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Image Slider</title>
+</head>
+<body>
+  <!-- ✅ Floating Donate Button -->
+<a href="donate.html" class="floating-donate-btn">
+    <i class="fa fa-heart"></i> Donate
+</a>
 
+<style>.floating-donate-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    background-color: #4a90e2; /* Light Blue like screenshot */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+/* Hover Effect */
+.floating-donate-btn:hover {
+    background-color: #357ABD;
+    transform: scale(1.08);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .floating-donate-btn {
+        bottom: 90px;
+        right: 10px;
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+</style>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -789,7 +941,7 @@
   <div class="member-container">
 
     <div class="member-card">
-      <img src="membar1.jpg" alt="Member Photo">
+      <img src="IMAGES/membar1.jpg" alt="Member Photo">
       <h3>Indra Shivhre</h3>
       <p><strong>पद:</strong> सदस्य  </p>
       <p><strong>मोबाइल:</strong> +91 8827577581 </p>
@@ -1029,4 +1181,3 @@ hr {
 
 </body>
 </html>
-
