@@ -617,16 +617,57 @@
     <nav>
       <a href="index.html" class="back">🏠Home</a>
       <a href="about.html">About</a>
-      <a href="#objectivs">Objectives</a>
+      
       <a href="members.html">Our Mambers</a>
       <a href="apply_member.html">Membership</a>
       <a href="#projects">Projects</a>
-      <a href="#event">Media</a>
-      <a href="#gallery">Gallery</a>
+      <a href="media.html">Media</a>
+      <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
       <a href="donate.html">Donate Us</a>
     </nav>
-    
+    <!-- Language Translator -->
+<div id="google_translate_element" style="float:right; margin-right:20px;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'hi',
+      includedLanguages: 'hi,en,mr,gu,bn,ta,te,kn,ml,pa,ur,ne,ar',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script type="text/javascript" 
+src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<style>
+#google_translate_element select {
+    background: #ffffff !important;
+    color: #000 !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hiding Google Branding (Optional but clean look) */
+.goog-logo-link { display:none !important; }
+.goog-te-gadget { color: transparent !important; }
+.goog-te-banner-frame { display: none !important; }
+body { top: 0px !important; }
+
+/* Inside dropdown options */
+.goog-te-combo {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+</style>
 
    
 
@@ -884,6 +925,912 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
 }
 
   </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NGO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* ✅ Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .about-hero h1 {
+            font-size: 42px;
+            margin: 0;
+            font-weight: 700;
+        }
+        .about-hero p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* ✅ About Us Section */
+        .about-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .about-container h2 {
+            color: #1c6fac;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .about-container p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* ✅ Mission & Vision */
+        .mv-section {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mv-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 280px;
+            max-width: 350px;
+            transition: 0.3s;
+        }
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+        .mv-card h3 {
+            color: #fd7e14;
+        }
+
+        /* ✅ Founder Section */
+        .founder-section {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .founder-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1c6fac;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .founder-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            color: #1c6fac;
+        }
+        .founder-role {
+            font-size: 16px;
+            color: #fd7e14;
+            font-weight: 600;
+        }
+        .founder-msg {
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ✅ Values Section */
+        .values-section {
+            background: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .values-section h2 {
+            color: #1c6fac;
+            margin-bottom: 30px;
+        }
+        .values-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .value-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* ✅ CTA Section */
+        .cta-section {
+            background: linear-gradient(45deg, #1c6fac, #36a3eb);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-section a {
+            background: #fd7e14;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* ✅ Responsive */
+        @media(max-width: 768px) {
+            .about-hero h1 { font-size: 32px; }
+            .about-hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- ✅ About Content -->
+    <section class="about-container" data-aos="fade-up">
+        <!-- 🌟 WHO WE ARE SECTION START -->
+<section class="who-we-are">
+    <div class="who-container">
+        <div class="who-text">
+            <h2> Who We Are</h2>
+            <p>
+                हमारी NGO समाज के कमजोर वर्गों के लिए शिक्षा, स्वास्थ्य, महिला सशक्तिकरण और पर्यावरण संरक्षण के क्षेत्र में कार्य करती है।
+                हमारा उद्देश्य समाज में सकारात्मक बदलाव लाना और हर व्यक्ति को एक बेहतर जीवन का अवसर प्रदान करना है।
+            </p>
+            <p>
+                हम ग्रामीण और शहरी क्षेत्रों में सेवाएँ प्रदान करते हैं — जैसे फ़्री मेडिकल कैंप, स्कॉलरशिप प्रोग्राम, स्किल डेवलपमेंट, 
+                महिला आत्मनिर्भरता अभियान आदि।
+            </p>
+        </div>
+        <style>
+          /* WHO WE ARE SECTION */
+.who-we-are {
+    background-color: #f7f7f7;
+    padding: 60px 10%;
+}
+
+.who-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.who-text {
+    flex: 1 1 45%;
+}
+
+.who-text h2 {
+    font-size: 2.2rem;
+    color: #1a5d39;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.who-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.who-images {
+    flex: 1 1 45%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.who-images img {
+    width: 48%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.who-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .who-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .who-images img {
+        width: 80%;
+    }
+}
+
+        </style>
+
+        <!-- 2 Images -->
+        <div class="who-images">
+            
+            
+            <img src="IMAGES/teamwork.jpg" alt="NGO Team Working"><br>
+            <img src="IMAGES/helping.jpg" alt="Helping Hand">
+        
+        </div>
+    </div>
+</section>
+<!-- 🌟 WHO WE ARE SECTION END -->
+
+        <!-- 🌟 WHAT WE DO WITH IMAGES -->
+<section class="what-we-do-img">
+    <h2>🌍 हम क्या करते हैं (What We Do)</h2>
+    <p class="what-description">
+        हमारा संगठन समाज के जरूरतमंद लोगों की सहायता के लिए कई क्षेत्रों में कार्य करता है। नीचे दिए गए सेक्शन में आप हमारे प्रमुख कार्य देख सकते हैं:
+    </p>
+
+    <div class="work-image-container">
+
+        <!-- Box 1: Education -->
+        <div class="work-img-card">
+            <img src="IMAGES/education.jpg" alt="Education Work">
+            <div class="work-info">
+                <i class="fas fa-book-open"></i>
+                <h3>शिक्षा सहायता</h3>
+                <p>गरीब, अनाथ और जरूरतमंद बच्चों को किताबें, बैग, ट्यूशन एवं स्कूल एडमिशन में सहायता।</p>
+            </div>
+        </div>
+
+        <!-- Box 2: Health -->
+        <div class="work-img-card">
+            <img src="IMAGES/health.jpg" alt="Health Work">
+            <div class="work-info">
+                <i class="fas fa-stethoscope"></i>
+                <h3>स्वास्थ्य सेवाएँ</h3>
+                <p>हेल्थ चेकअप कैंप, दवा वितरण, रक्तदान शिविर और स्वास्थ्य जागरूकता अभियान।</p>
+            </div>
+        </div>
+
+        <!-- Box 3: Charity -->
+        <div class="work-img-card">
+            <img src="IMAGES/charity.jpg" alt="Helping Poor">
+            <div class="work-info">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>गरीबों की सहायता</h3>
+                <p>जरूरतमंद परिवारों को भोजन, कपड़े, कंबल, राशन और आपातकालीन सहायता प्रदान की जाती है।</p>
+            </div>
+        </div>
+
+        <!-- Box 4: Environment -->
+        <div class="work-img-card">
+            <img src="IMAGES/enviroment.jpg" alt="Plantation Work">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>पर्यावरण संरक्षण</h3>
+                <p>पेड़ लगाओ अभियान, स्वच्छता अभियान और प्लास्टिक मुक्त समाज के लिए जागरूकता फैलाते हैं।</p>
+            </div>
+            
+
+    </div>
+    <div class="work-img-card">
+            <img src="IMAGES/social.jpg" alt="Social Work">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>समाज कल्याण</h3>
+                <p>समाज के कल्याण के लिए मूल भावना से हमेशा आगे </p>
+            </div>
+        </div>
+        <div class="work-img-card">
+            <img src="IMAGES/nasha.jpg" alt="nasa mukti">
+            <div class="work-info">
+                <i class="fas fa-tree"></i>
+                <h3>नशा मुक्ति </h3>
+                <p>गाँव गाँव और नगर नगर में गूंजेगा ये सन्देश नशा मुक्त हो भारत देश  </p>
+            </div>
+        </div>
+</section>
+<style>
+  /* 🌟 What We Do - With Pictures */
+.what-we-do-img {
+    padding: 60px 20px;
+    background: #f5f8ff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.what-we-do-img h2 {
+    font-size: 32px;
+    color: #1c6fac;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.what-description {
+    font-size: 16px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.work-image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.work-img-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.work-img-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.work-img-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.work-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.work-info i {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #ffdd57;
+}
+
+.work-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.work-info p {
+    font-size: 14px;
+}
+
+.work-img-card:hover .work-info {
+    background: rgba(0,0,0,0.8);
+}
+
+</style>
+
+        <div class="mv-section">
+            <div class="mv-card">
+                <h3>🎯 Mission</h3>
+                <p>जरूरतमंद समुदायों को शिक्षा, स्वास्थ्य और अवसर देकर सशक्त बनाना।</p>
+            </div>
+            <div class="mv-card">
+                <h3>👁 Vision</h3>
+                <p>एक ऐसा समाज जहाँ हर व्यक्ति सम्मान, शिक्षा और स्वास्थ्य के साथ जीवन जी सके।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Founder Section -->
+    <section class="founder-section" data-aos="fade-up">
+        <img src="IMAGES/founder.jpg" class="founder-img" alt="Founder">
+        <div class="founder-name">डॉ. गौरीशंकर चौकसे
+</div>
+        <div class="founder-role">Founder & President</div>
+        <p class="founder-msg">"हमारा उद्देश्य समाज के हर व्यक्ति तक शिक्षा, स्वास्थ्य और सम्मान पहुँचाना है। 
+        मिलकर हम एक बेहतर कल बना सकते हैं।"</p>
+    </section>
+ <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .members-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .members-section h2 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .members-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .member-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .member-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      text-align: center;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .member-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .member-card h3 {
+      font-size: 1.4rem;
+      margin: 10px 0 5px;
+      color: #222;
+      font-weight: 600;
+    }
+
+    .member-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 3px 0;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      font-size: 1.3rem;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+      transform: scale(1.2);
+    }
+  </style>
+  <section class="members-section">
+  <h2>👥 हमारे समर्पित सदस्य</h2>
+  <p>ये वो लोग हैं जिनकी वजह से हमारी संस्था समाज की सेवा में निरंतर कार्यरत है।</p>
+
+  <div class="member-container">
+
+    <div class="member-card">
+      <img src="IMAGES/membar1.jpg" alt="Member Photo">
+      <h3>Indra Shivhre</h3>
+      <p><strong>पद:</strong> सदस्य  </p>
+      <p><strong>मोबाइल:</strong> +91 8827577581 </p>
+      <p><strong>ईमेल:</strong> @ladoshivhare925@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="member-card">
+      <img src="IMAGES/membar2.jpg" alt="Member Photo">
+      <h3>Pratimar</h3>
+      <p><strong>पद:</strong> महिला मंडल अध्यक्ष  </p>
+      <p><strong>मोबाइल:</strong> +91 8368452090 </p>
+      <p><strong>ईमेल:</strong> pratimagp3@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar3.jpg" alt="Member Photo">
+      <h3>Dr Vidhya Vishvkarma </h3>
+      <p><strong>पद:</strong> सचिव </p>
+      <p><strong>मोबाइल:</strong> +91 7987230223 </p>
+      <p><strong>ईमेल:</strong> vidhyaashi90@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar4.jpg" alt="Member Photo">
+      <h3>Sandhya Jain</h3>
+      <p><strong>पद:</strong>सदस्य  </p>
+      <p><strong>मोबाइल:</strong> +91 8305167063 </p>
+      <p><strong>ईमेल:</strong> sandhyajain074@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar5.jpg" alt="Member Photo">
+      <h3>Rajendra Singh Chauhanr</h3>
+      <p><strong>पद:</strong> सयुंक्त सचिव </p>
+      <p><strong>मोबाइल:</strong> +91 9893878869 </p>
+      <p><strong>ईमेल:</strong> rabendrachauhan524@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div><div class="member-card">
+      <img src="IMAGES/membar6.jpg" alt="Member Photo">
+      <h3>Gourav Tiwari </h3>
+      <p><strong>पद:</strong> Media  </p>
+      <p><strong>मोबाइल:</strong> +91 9981119115 </p>
+      <p><strong>ईमेल:</strong> gourav.tiwari79@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="IMAGES/membar7.jpg" alt="Member Photo">
+      <h3> Rajesh </h3>
+      <p><strong>पद:</strong> Marketing Menager </p>
+      <p><strong>मोबाइल:</strong> +91 8103067091 </p>
+      <p><strong>ईमेल:</strong> rajesh201289@gmail.com </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="IMAGES/membar8.jpg" alt="Member Photo">
+      <h3>Dhaniram  Chadar</h3>
+      <p><strong>पद:</strong> Mentor </p>
+      <p><strong>मोबाइल:</strong> +91 8120077414</p>
+      <p><strong>ईमेल:</strong> dhaniramchadar77@gmail.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+<!-- 🌟 FAQ SECTION -->
+<section class="faq-section">
+    <h2>❓ अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+    <div class="faq-container">
+
+        <!-- Question 1 -->
+        <div class="faq-item">
+            <button class="faq-question">1. आपका NGO किस उद्देश्य से स्थापित किया गया है?</button>
+            <div class="faq-answer">
+                <p>हमारा NGO शिक्षा, स्वास्थ्य, पर्यावरण संरक्षण, और समाज के वंचित वर्गों के विकास हेतु कार्य करता है।</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <button class="faq-question">2. इस NGO को कैसे सपोर्ट किया जा सकता है?</button>
+            <div class="faq-answer">
+                <p>आप आर्थिक सहायता, वस्तु दान, स्वयंसेवा (Volunteer), या लोगों में जागरूकता फैलाकर हमारी मदद कर सकते हैं।</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <button class="faq-question">3. क्या NGO का Registration और सभी कानूनी दस्तावेज मान्य हैं?</button>
+            <div class="faq-answer">
+                <p>हाँ, हमारा NGO विधिवत पंजीकृत है और सभी आवश्यक सरकारी प्रमाणपत्र हमारे पास उपलब्ध हैं।</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question">4. मैं NGO की Membership या Volunteer कैसे बन सकता हूँ?</button>
+            <div class="faq-answer">
+                <p>आप हमारी वेबसाइट के <strong>Join / Volunteer</strong> सेक्शन में फॉर्म भरकर सदस्य या वॉलंटियर बन सकते हैं।</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<style>
+  /* 💡 FAQ Section Styling */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #f7faff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1c6fac;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1c6fac;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #fd7e14;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    padding: 0 15px;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Active/Show Answer */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+</style>
+<style>
+  
+/* 🌟 Board Members Section Styling */
+.board-members {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fafc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.board-members h2 {
+    font-size: 32px;
+    color: #1c6fac;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.member-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #1c6fac;
+}
+
+.member-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.member-card .position {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c6fac;
+    margin-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 14px;
+    color: #555;
+}
+</style>
+    <!-- ✅ Values Section -->
+    <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-box">🤝 ईमानदारी और पारदर्शिता</div>
+            <div class="value-box">❤️ दया और सेवा भाव</div>
+            <div class="value-box">📚 शिक्षा सबके लिए</div>
+            <div class="value-box">🌱 सतत विकास</div>
+        </div>
+    </section>
+    <style>
+
+/* Main Apply Member Form Box */
+.apply-member-box {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.apply-member-box h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+/* Input Fields Design */
+.apply-member-box label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.apply-member-box input, 
+.apply-member-box select, 
+.apply-member-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.apply-member-box input:focus,
+.apply-member-box select:focus,
+.apply-member-box textarea:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+.apply-member-box button {
+  width: 100%;
+  padding: 12px;
+  background: #004aad;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-member-box button:hover {
+  background: #00307a;
+}
+</style>
+
+<div class="apply-member-box">
+  <h2>Apply for Membership</h2>
+  <form action="#" method="post">
+    <label>Full Name</label>
+    <input type="text" name="name" placeholder="Enter your full name" required>
+
+    <label>Email Address</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>Phone Number</label>
+    <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Address</label>
+    <textarea name="address" rows="3" placeholder="Enter your full address" required></textarea>
+
+    <label>Why do you want to join?</label>
+    <textarea name="reason" rows="3" placeholder="Write your reason"></textarea>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
+
+    <!-- ✅ Call to Action -->
+    <section class="cta-section">
+        <h2>Join Us in Making a Difference</h2>
+        <a href="contact.html">Contact Us</a>
+    </section>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 
 </body>
 </html>
